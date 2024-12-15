@@ -63,70 +63,12 @@
         <main>
             <!-- News Cards Section -->
             <div class="container my-5">
-                <div class="row">
-                    <!-- Card 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="Assets/Best.png" class="card-img-top" alt="News Image 1" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <a href="article.html?id=1" class="stretched-link"></a>
-                                <h5 class="card-title">CityU News Title 1</h5>
-                                <p class="card-text">Short description for the CityU news article goes here. It gives an overview of the content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="Assets/HiRes.jpg" class="card-img-top" alt="News Image 2" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">CityU News Title 2</h5>
-                                <p class="card-text">Short description for the second CityU news article goes here. It provides an introduction to the article.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="Assets/Unicanto.jpg" class="card-img-top" alt="News Image 3" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">CityU News Title 3</h5>
-                                <p class="card-text">Short description for the third CityU news article goes here. It briefly summarizes the content of the article.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="Assets/Best.png" class="card-img-top" alt="News Image 1" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">CityU News Title 1</h5>
-                                <p class="card-text">Short description for the CityU news article goes here. It gives an overview of the content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="Assets/HiRes.jpg" class="card-img-top" alt="News Image 2" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">CityU News Title 2</h5>
-                                <p class="card-text">Short description for the second CityU news article goes here. It provides an introduction to the article.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="Assets/Unicanto.jpg" class="card-img-top" alt="News Image 3" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">CityU News Title 3</h5>
-                                <p class="card-text">Short description for the third CityU news article goes here. It briefly summarizes the content of the article.</p>
-                            </div>
-                        </div>
+                <div class="container mt-5">
+                    <div class="row" id="news-cards-container">
+                        <!-- News cards will be dynamically inserted here -->
                     </div>
                 </div>
+                 
             </div>
         </main>
 
@@ -141,10 +83,37 @@
             </div>
         </footer>
 
+        <script src="newsData.js"></script>
+        <script>
+            // This is the script to generate cards dynamically from `newsData`
+            const container = document.getElementById("news-cards-container");
+        
+            // Loop through the `newsData` and dynamically create cards
+            newsData.forEach(news => {
+                const card = document.createElement('div');
+                card.classList.add('col-md-4', 'mb-4');
+                card.innerHTML = `
+                    <div class="card">
+                        <a href="article.html?id=${news.id}" style="text-decoration:none; color: inherit">
+                        <img src="${news.image || 'default-image.jpg'}" class="card-img-top" alt="Card image">
+                        <div class="card-body">
+                            
+                            <h5 class="card-title">${news.title}</h5>
+                            <p class="card-text">${news.description}</p>
+                            <p class="text-muted">By ${news.author} | ${news.date}</p>
+                        </div>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        </script>
+
         <!-- Bootstrap JavaScript Libraries -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-cuEZXMt92/yjJpc2kqJNkJc0F0S7vW9EdclK5ZzfuK5IuMaqz1GJXjxE8kcSgBxO" crossorigin="anonymous"></script>
         <script>
+            
             // Aquí iría tu clave API de Google Translate
             const apiKey = 'AIzaSyAH13op3-X7Cr-zZlhzaUYcKAJID07Up2M'; // Reemplaza esto con tu clave de API real.
 
