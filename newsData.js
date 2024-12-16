@@ -12,7 +12,7 @@ const newsData =  [
     ],
     "description": "City University of Seattle is thrilled to announce its selection as a Gold Winner in the Seattle Time’s Best in the PNW People’s Choice Awards for the College / University category.",
     "image": "Assets/Best.png",
-    "tags": "",
+    "tags": "Awards",
     "university": "CityU"
   },
   {
@@ -29,7 +29,7 @@ const newsData =  [
     ],
     "description": "As of September 2nd, Christopher Bryan, CPA has been named Interim President of City University of Seattle.",
     "image": "Assets/HiRes.jpg",
-    "tags": "",
+    "tags": "Directives",
     "university": "CityU"
   },
   {
@@ -54,7 +54,7 @@ const newsData =  [
     ],
     "description": "Durante la sesión ordinaria correspondiente al mes de diciembre, el Honorable Consejo Directivo Universitario (CDU) de la Universidad Autónoma de San Luis Potosí (UASLP) aprobó el Presupuesto de Ingresos y Egresos a ejercer durante el año fiscal 2025.",
     "image": "Assets/Presupuesto2025.jpeg",
-    "tags": "CDU",
+    "tags": "Directives",
     "university": "UASLP"
   },
   {
@@ -113,7 +113,7 @@ const newsData =  [
     ],
     "description": "La Universidad Autónoma de San Luis Potosí (UASLP) reafirma su compromiso con la sociedad al presentar el proyecto “Hongo Negro”, un esfuerzo de la institución en innovación agroalimentaria, con impacto social y como resultado del gasto público",
     "image": "Assets/hongo.jpeg",
-    "tags": "Investigation",
+    "tags": "Research",
     "university": "UASLP"
   },
   {
@@ -154,7 +154,7 @@ const newsData =  [
     ],
     "description": "Student Services Highlights",
     "image": "Assets/StudentServices.png",
-    "tags": "",
+    "tags": "Directives",
     "university": "CityU"
   },
   {
@@ -198,7 +198,7 @@ const newsData =  [
     ],
     "description": "Con la llegada de la temporada invernal y el impacto de las secuelas que aún prevalecen del SARS-CoV-2, tanto en la sociedad como en el sector económico, es crucial mantener actualizados los esquemas de vacunación contra COVID-19 y la influenza estacional, afirmó el doctor Christian García Sepúlveda, coordinador del Laboratorio de Genómica Viral y Humana BSL-3 de la Facultad de Medicina de la Universidad Autónoma de San Luis Potosí (UASLP).",
     "image": "Assets/ChristianGarcia.jpeg",
-    "tags": "Investigation",
+    "tags": "Research",
     "university": "UASLP"
   },
   {
@@ -218,7 +218,7 @@ const newsData =  [
     ],
     "description": "El doctor Óscar Jasel Berra Montiel, investigador de la Facultad de Ciencias de la Universidad Autónoma de San Luis Potosí (UASLP), es uno de los ganadores de la prestigiosa Cátedra de Investigación para Jóvenes Científicas y Científicos 2024 de la Fundación Marcos Moshinsky, lo que le permitirá desarrollar un proyecto durante dos años.",
     "image": "Assets/MarcosMoshinsky.jpeg",
-    "tags": "Investigation",
+    "tags": "Research",
     "university": "UASLP"
   },
   {
